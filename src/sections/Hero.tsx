@@ -20,7 +20,7 @@ export const HeroSection = () => {
             <span className="font-semibold">Explorez mes travaux</span>
             <ArrowDown className="size-4"/>
           </button>
-          <button className="inline-flex items-center gap-2 border border-white bg-white ">
+          <button className="inline-flex items-center gap-2 border border-white bg-white text-gray-900">
             <span>👋</span>
             <span>Connectons nous</span>
           </button>
