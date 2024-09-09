@@ -15,12 +15,12 @@ export const HeroSection = () => {
         </div>
         <h1 className="font-serif text-3xl text-center mt-8 tracking-wide">Développeur Front-End exceptionnel</h1>
         <p className="mt-4 text-center text-white/60">Je suis spécialisé dans la transformation de designs en application web performante et optimisée. Parlons de votre prochain projet ensemble.</p>
-        <div className="flox flox-col items-center">
+        <div className="flex flex-col items-center mt-8">
           <button className="inline-flex items-center gap-2 border border-white/15 px-6 h-12 rounded-xl">
             <span className="font-semibold">Explorez mes travaux</span>
             <ArrowDown className="size-4"/>
           </button>
-          <button>
+          <button className="inline-flex items-center gap-2 border border-white bg-white ">
             <span>👋</span>
             <span>Connectons nous</span>
           </button>
