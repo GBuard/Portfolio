@@ -8,9 +8,9 @@ export const HeroSection = () => {
       <div className="container">
         <div className="flex flex-col items-center">
         <Image src={memojiImage} className="size-[100px]" alt="Memoji on computer"/>
-        <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex">
-          <div></div>
-          <div>Disponible pour de nouveaux projets</div>
+        <div className="bg-gray-950 border border-gray-800 px-4 py-1.5 inline-flex items-center">
+          <div className="bg-green-500 size-2.5 rounded-full"></div>
+          <div className="text-sm font-medium">Disponible pour de nouveaux projets</div>
         </div>
         </div>
         <h1>Développeur Front-End exceptionnel</h1>
