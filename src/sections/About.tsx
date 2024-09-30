@@ -10,8 +10,10 @@ import ReactIcon from "@/assets/icons/react.svg";
 import ChromeIcon from "@/assets/icons/chrome.svg";
 import GithubIcon from "@/assets/icons/github.svg";
 import { TechIcon } from "@/components/TechIcon";
-import mapImage from '@/assets/images/map.png';
-import smileMemoji from '@/assets/images/memoji-smile.png';
+import mapImage from "@/assets/images/map.png";
+import smileMemoji from "@/assets/images/memoji-smile.png";
+import { CardHeader } from "@/components/CardHeader";
+import { ToolboxItems } from "@/components/ToolboxItems";
 
 const toolboxItems = [
     {
@@ -43,94 +45,85 @@ const toolboxItems = [
 const hobbies = [
     {
         title: "Astronomie",
-        emoji: '🌌',
+        emoji: "🌌",
     },
     {
-        title: "Photographie",
-        emoji: '',
+        title: "Géopolitique",
+        emoji: "🌍",
     },
     {
-        title: "Cuisine",
-        emoji: '',
+        title: "Ecologie",
+        emoji: "🌱",
     },
     {
-        title: "Randonnée",
-        emoji: '',
+        title: "Sciences",
+        emoji: "🧬",
+    },
+    {
+        title: "Batterie",
+        emoji: "🥁",
+    },
+    {
+        title: "Jeux vidéo",
+        emoji: "🎮",
     },
     {
         title: "Cinéma",
-        emoji: '',
-    },
-    {
-        title: "Randonnée",
-        emoji: '',
-    },
-    {
-        title: "Cinéma",
-        emoji: '',
+        emoji: "🎬",
     },
 ];
 
 export const AboutSection = () => {
     return (
-        <div className="pb-96">
-            <SectionHeader
-                eyebrow="À propos"
-                title="Un aperçu de mon monde"
-                description="Découvrez mon parcours, mes compétences et mes inspirations."
-            />
-            <div>
-                <Card>
-                    <div>
-                        <StarIcon />
-                        <h3>Mes lectures</h3>
-                        <p>
-                            Découvrez les livres qui ont façonné mon point de
-                            vue.
-                        </p>
-                    </div>
-                    <Image src={bookImage} alt="Book cover" />
-                </Card>
-                <Card>
-                    <div>
-                        <StarIcon />
-                        <h3>Mes outils de développement</h3>
-                        <p>
-                            Découvrez les technologies et outils que
-                            j&rsquo;utilise pour créer des expériences digitales
-                            uniques.
-                        </p>
-                    </div>
-                    <div>
-                        {toolboxItems.map((item) => (
-                            <div key={item.title}>
-                                <TechIcon component={item.iconType} />
-                                <span>{item.title}</span>
-                            </div>
-                        ))}
-                    </div>
-                </Card>
-                <Card>
-                <div>
-                        <StarIcon />
-                        <h3>Au delà du code</h3>
-                        <p>
-                            Découvrez mes passions et mes inspirations en dehors
-                        </p>
-                    </div>
-                    <div>
-                        {hobbies.map((hobby) => (
-                            <div key={hobby.title}>
-                                <span>{hobby.title}</span>
-                                <span>{hobby.emoji}</span>
-                            </div>
-                        ))}
-                    </div>
-                </Card>
-                <Card>
+        <div className="py-20">
+            <div className="container">
+                <SectionHeader
+                    eyebrow="À propos"
+                    title="Un aperçu de mon monde"
+                    description="Découvrez mon parcours, mes compétences et mes inspirations."
+                />
+                <div className="mt-20">
+                    <Card className="h-[320px]">
+                        <CardHeader
+                            title="Mes lectures"
+                            description="Découvrez les livres qui ont façonné mon point
+                                de vue."
+                        />
+                        <div className="w-40 mx-auto mt-8">
+                            <Image src={bookImage} alt="Book cover" />
+                        </div>
+                    </Card>
+                    <Card className="h-[320px] p+0">
+                        <CardHeader
+                            title="Mes outils de développement"
+                            description="Découvrez les technologies et outils que
+                                j&rsquo;utilise pour créer des expériences
+                                digitales uniques."
+                            className="px-6 pt-6"
+                        />
+                        <ToolboxItems items={toolboxItems} className="mt-6" />
+                        <ToolboxItems items={toolboxItems} className="mt-6" />
+                    </Card>
+                    <Card>
+                        <CardHeader
+                            title="Au delà du code"
+                            description="Découvrez mes passions et mes inspirations en
+                                dehors"
+                        />
+                        <div>
+                            {hobbies.map((hobby) => (
+                                <div key={hobby.title}>
+                                    <span>{hobby.title}</span>
+                                    <span>{hobby.emoji}</span>
+                                </div>
+                            ))}
+                        </div>
+                    </Card>
+                    <Card>
                         <Image src={mapImage} alt="Map" />
                         <Image src={smileMemoji} alt="Memoji Souriant" />
-                </Card>
+                    </Card>
+                </div>
             </div>
         </div>
     );
