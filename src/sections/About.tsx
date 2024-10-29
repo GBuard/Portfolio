@@ -96,7 +96,7 @@ export const AboutSection = () => {
                 />
                 <div className="mt-20 flex flex-col gap-8">
                     <div className="grid grid-cols-1 gap-8 md:grid-cols-5 lg:grid-cols-3">
-                        <Card className="h-[320px] md:col-span-2 lg:col-span-1">
+                        <Card className="h-[340px] md:col-span-2 lg:col-span-1">
                             <CardHeader
                                 title="Mes lectures"
                                 description="Découvrez les livres qui ont façonné mon point
@@ -106,7 +106,7 @@ export const AboutSection = () => {
                                 <Image src={bookImage} alt="Book cover" />
                             </div>
                         </Card>
-                        <Card className="h-[320px] md:col-span-3 lg:col-span-2">
+                        <Card className="h-[340px] md:col-span-3 lg:col-span-2">
                             <CardHeader
                                 title="Mes outils de développement"
                                 description="Découvrez les technologies et outils que
@@ -121,7 +121,7 @@ export const AboutSection = () => {
                             />
                             <ToolboxItems
                                 items={toolboxItems}
-                                className="mt-6"
+                                className="mt-4"
                                 itemsWrapperClassName="animate-move-right [animation-duration:15s]"
                             />
                         </Card>
